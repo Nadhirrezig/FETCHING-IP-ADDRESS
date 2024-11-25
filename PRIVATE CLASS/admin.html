@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>client Interface</title>
+  <script src="/socket.io/socket.io.js"></script>
+    <script>
+          window.onload = () => {
+          fetch("https://ipinfo.io/json")
+            .then(response => response.json())
+            .then(data => { 
+              console.log(`IP Address is: ${data.ip}`);
+            })
+            .catch(error => {
+              console.error("Error caused by firewall fk you:", error);
+            });
+    };
+    </script>
+</head>
+<body>
+  <h1>Welcome, client!</h1>
+  <p>Open Consol and see you Ip adress printed...</p>
+</body>
+</html>
